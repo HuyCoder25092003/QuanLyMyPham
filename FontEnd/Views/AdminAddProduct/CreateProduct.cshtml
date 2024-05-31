@@ -1,0 +1,43 @@
+﻿
+@model QLMP.Common.Req.SanPhamReq
+<link rel="stylesheet" href="@(Url.Content("~/css/styles.css"))" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Thêm Sản Phẩm</title>
+    <link rel="stylesheet" href="~/css/styles.css">
+</head>
+<body>
+    <h1>Thêm Sản Phẩm</h1>
+    <div class="row container">
+        <table class="col-md-4">
+            <tbody>
+        
+        <form asp-action="CreateProduct" method="post">
+            <tr  class="form-group">
+                    <td><label for="TenSp">Tên sản phẩm:</label></td>
+                    <td><input type="text" class="form-control" id="TenSp" name="TenSp" required></td>
+            </tr>
+            
+            <tr class="form-group">
+                    <td> <label for="Gia">Giá:</label></td>
+                   <td> <input type="number" class="form-control" id="Gia" name="Gia" required></td>
+            </tr>
+            <tr class="form-group">
+                    <td><label for="MaLoaiSp">Mã Loại sản phẩm:</label></td>
+                    <td><input type="text" class="form-control" id="MaLoaiSp" name="MaLoaiSp" required></td>
+            </tr>
+            <tr class="form-group">
+                    <td>    <label for="HinhAnh">Hình ảnh:</label></td>
+                    <td>   <input type="text" class="form-control" id="HinhAnh" name="HinhAnh"></td>
+            </tr>
+            <button type="submit" class="btn btn-primary">Thêm</button>
+        </form>
+            </tbody>
+         </table>
+    </div>
+    
+</body>
+</html>
